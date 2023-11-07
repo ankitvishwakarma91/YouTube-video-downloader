@@ -1,0 +1,18 @@
+# imoprt library
+from pytube import YouTube
+
+# You tube video link past here 
+url = "Paste link here."
+my_video = YouTube(url);
+# or 
+my_video = YouTube("Paste link here")
+
+# if you want to know the title of video 
+print(my_video.title)
+
+# if you want to see thumbnail
+print(my_video.thumbnail_url)
+
+# Download 
+my_video = my_video.streams.get_highest_resolution
+my_video.download()
